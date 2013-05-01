@@ -1,0 +1,16 @@
+{
+    "name": "application-name"
+  , "version": "0.0.1"
+  , "private": true
+  , "repository": {
+		"type": "git",
+		"url": "git://github.com/analogj/node-angular-less-seed.git"
+	}
+  , "dependencies": {
+		"express": "3.0.0"
+		, "ejs": ">= 0.8.3"
+		, "ejs-locals": ">= 1.0.2"
+		, "less-middleware": ">= 0.1.11"
+		, "bootstrap": "git://github.com/twitter/bootstrap.git#v2.2.2"
+	}
+}
