@@ -1,8 +1,9 @@
 var express = require( 'express' ),
  routes = require('./routes'),
  engine = require('ejs-locals')
- app = express();
- ;
+ app = express(),
+ lessMiddleware = require('less-middleware');
+
  
 // Configuration
 // remove methodOverride, add favicon, logger and move static middleware upper
@@ -12,6 +13,10 @@ app.configure( function (){
   app.set( 'views', __dirname + '/views' );
   app.set( 'view engine', 'ejs' );
   app.use( express.favicon());
+  app.use(lessMiddleware({
+        src: __dirname + '/public',
+        compress: true
+  }));
   app.use( express.static( __dirname + '/public' ));
   app.use( express.logger());
   app.use( express.bodyParser());
