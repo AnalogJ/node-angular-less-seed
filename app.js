@@ -41,7 +41,6 @@ app.configure( 'production', function (){
  
 // Routes
 var routes = require( './routes' );
-
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
  
